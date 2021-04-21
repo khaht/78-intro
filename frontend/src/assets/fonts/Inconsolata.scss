@@ -1,0 +1,6 @@
+$font_path: '~@/assets/fonts/';
+/* latin */
+  @font-face {
+	font-family: 'B612 Mono';
+	src: url($font_path + 'B612Mono-Regular.ttf') format('ttf')
+  }

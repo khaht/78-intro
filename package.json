@@ -1,0 +1,49 @@
+{
+  "name": "78-security",
+  "version": "0.1.0",
+  "description": "78 security",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htk159131721/78security.git"
+  },
+  "author": "HuynhKha <huynhkha8295@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "*"
+    ],
+    "nohoist": [
+      "**/ts-jest",
+      "**/ts-jest/**",
+      "**/ts-node",
+      "**/ts-node/**",
+      "**/jest",
+      "**/jest/**",
+      "**/@types/jest",
+      "**/@types/jest/**",
+      "**/@types/node",
+      "**/@types/node/**"
+    ]
+  },
+  "scripts": {
+    "ci": "git-cz",
+		"commit": "git-cz",
+		"serve": "yarn workspace @app/frontend run serve",
+		"build:admin": "yarn workspace @app/frontend run build",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "git-cz": "^4.3.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "lint-staged": {
+    "{packages}/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {}
+}
