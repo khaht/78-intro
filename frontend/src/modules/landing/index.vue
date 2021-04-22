@@ -1,13 +1,13 @@
 <template>
   <div class="px-0 sm:px-40">
-    <div class="sm:w-2/5 w-full mx-auto">
+    <div class="main-app mx-auto relative">
       <div class="mt-4 pb-3 flex justify-center items-center top-logo">
         <div class="w-2/4 text-center flex justify-center flex-col">
           <img class="img-logo" src="@/assets/images/logo-app.png" alt="logo" />
           <small class="text-small">Trung thực là nền tảng của sự sống còn</small>
         </div>
         <div class="w-2/4 text-center self-end">
-          <h1 class="txt-reg">Trung tâm đăng ký</h1>
+          <img src="@/assets/images/txt-reg.png" class="txt-img" alt="" />
         </div>
       </div>
       <div class="w-full flex">
@@ -55,7 +55,7 @@
           </marquee>
         </div>
       </div>
-      <div class="px-8 mt-2">
+      <div class="px-4 sm:px-8 mt-2">
         <div class="section-1 flex">
           <div class="w-8/12">
             <div class="relative bg-1">
@@ -75,7 +75,7 @@
           <div class="w-4/12">
             <div class="w-95 h-full ml-2 relative">
               <div class="box-inf flex flex-col justify-center items-center">
-                <img src="@/assets/images/logo-app.png" class="img-inf mb-1" alt="" />
+                <img src="@/assets/images/profile.png" class="img-inf mb-1" alt="" />
                 <small class="text-small">Trung tâm cá nhân</small>
               </div>
               <div class="box-bot-inf mt-3 bg-only"></div>
@@ -99,19 +99,19 @@
       <div class="bar-bot w-full">
         <ul class="w-full">
           <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/icon1.png" class="icon-bot" alt="ic" />
+            <img src="@/assets/images/home.png" class="icon-bot" alt="ic" />
             <small class="text-white text-xs">Trang chủ</small>
           </li>
           <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/icon1.png" class="icon-bot" alt="ic" />
+            <img src="@/assets/images/cskh.png" class="icon-bot" alt="ic" />
             <small class="text-white text-xs">CSKH 24/7</small>
           </li>
           <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/icon1.png" class="icon-bot" alt="ic" />
+            <img src="@/assets/images/taiapp.png" class="icon-bot" alt="ic" />
             <small class="text-white text-xs">Tải app</small>
           </li>
           <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/icon1.png" class="icon-bot" alt="ic" />
+            <img src="@/assets/images/tailai.png" class="icon-bot" alt="ic" />
             <small class="text-white text-xs">Tải lại</small>
           </li>
         </ul>

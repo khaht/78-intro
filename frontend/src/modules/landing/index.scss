@@ -13,6 +13,9 @@
   width: 120px;
   margin: auto;
 }
+.txt-img {
+  width: 200px;
+}
 .box-custom {
   width: 33% !important;
   margin-right: 1.5%;
@@ -49,6 +52,8 @@
     }
     img {
       width: 30px;
+      height: 35px;
+      object-fit: contain;
       margin-bottom: 5px;
     }
   }
@@ -110,12 +115,26 @@
 .box-bot-inf {
   height: 220px;
 }
+.main-app {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .bar-bot {
+    position: absolute;
+  }
+  .main-app {
+    width: 445px;
+  }
+}
 @media screen and (max-width: 375px) {
   .text-small {
     font-size: 8px;
   }
   .text-xs-small {
     font-size: 9px;
+  }
+  .txt-img {
+    width: 150px;
   }
 }
 @media screen and (max-width: 320px) {
