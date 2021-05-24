@@ -24,7 +24,7 @@ export default class Service {
     const { namespace = null } = this.defaultOptions;
     // Accept */*
     axios.defaults.headers.common.Accept = '*/*';
-    const endpoint = process.env.VUE_APP_SERVICE_ENDPOINT || '';
+    const endpoint = (window as any).service_endpoint || '';
     const baseURL = endpoint + (namespace ? `/${namespace}/` : '/');
     this.axios = axios.create({
       baseURL,

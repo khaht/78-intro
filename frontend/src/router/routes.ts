@@ -1,17 +1,31 @@
 import { lazyLoadView } from 'core/utils';
-export const PROJECT_DETAIL = '/project/:pjtCd/:pjtSlug';
-export const SPRINT_DETAIL = '/sprint/:pjtCd/:pjtSlug/:sprId';
-export const TARGET = '/target/:tgtId/:tgtSlug';
-export const SPRINT_LIST = '/sprints/:pjtCd/:pjtSlug';
 
-// rbb
-export const LANDING = '/';
 const Landing = () => lazyLoadView(import('modules/landing/index.vue'));
+const Profile = () => lazyLoadView(import('modules/profile/index.vue'));
+const Login = () => lazyLoadView(import('modules/auth/index.vue'));
 export default [
   {
     path: '/',
     name: 'landing',
     component: Landing,
+    meta: {
+      authRequired: false,
+      hideFooter: false,
+    },
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+    meta: {
+      authRequired: false,
+      hideFooter: false,
+    },
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile,
     meta: {
       authRequired: false,
       hideFooter: false,

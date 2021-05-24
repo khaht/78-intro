@@ -4,6 +4,7 @@ import Vuex, { StoreOptions } from 'vuex';
 import { RootState } from './types';
 import { home } from 'modules/home/store';
 import { constraint } from 'modules/landing/store';
+import { auth } from 'modules/auth/store';
 Vue.use(Vuex);
 
 const store: StoreOptions<RootState> = {
@@ -15,6 +16,7 @@ const store: StoreOptions<RootState> = {
   modules: {
     home,
     constraint,
+    auth,
   },
   strict: process.env.NODE_ENV !== 'production',
 };

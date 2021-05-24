@@ -1,120 +1,42 @@
 <template>
-  <div class="px-0 sm:px-40">
-    <div class="main-app mx-auto relative">
-      <div class="mt-4 pb-3 flex justify-center items-center top-logo">
-        <div class="w-2/4 text-center flex justify-center flex-col">
-          <img class="img-logo" src="@/assets/images/logo-app.png" alt="logo" />
-          <small class="text-small">Trung thực là nền tảng của sự sống còn</small>
+  <div class="pb-16">
+    <div class="banner">
+      <img class="img-banner" src="@/assets/images/banner.png" alt="" />
+    </div>
+    <div class="text-center my-4">
+      <el-button class="btn-reg">Đăng ký</el-button>
+    </div>
+    <div class="content px-6 pb-4">
+      <p>Nội dung khuyến mãi</p>
+      <div class="box-content p-4 mb-6">
+        <span class="text-red font-bold">KHUYẾN MÃI LẦN ĐẦU NẠP LÊN ĐẾN 120%</span> <br />
+        <span class="text-red font-bold">Mã khuyến mãi ZH09</span>
+        <div>
+          <p class="pt-6">TẶNG THƯỞNG LẦN ĐẦU TIÊN LÊN ĐẾN 120%</p>
+          <p>
+            78Win xin tặng bạn giá trị khuyến mãi lên đến 120% cho lần gửi đầu tiên. Tiền thưởng tối đa là 7.888.000
+            VNĐ. Đây là phần thưởng trực tiếp nhất và hợp lý nhất để cảm ơn sự lựa chọn, tin tưởng và ủng hộ tất cả các
+            thành viên mới cho 78Win
+          </p>
+          <p>Mô tả khuyến mãi</p>
+          <ul class="pb-10">
+            <li>
+              <span class="number-order">1</span>
+              <span
+                >Đối tượng tham gia: Tất cả thành viên có tài khoản cá cược hợp lệ tham gia gửi tiền lần đầu tiên tại
+                78Win</span
+              >
+            </li>
+            <li>
+              <span class="number-order">2</span>
+              <span>Thời gian khuyến mãi: Từ bây giờ - thông báo ngưng khuyến mãi trên website</span>
+            </li>
+            <li>
+              <span class="number-order">3</span>
+              <span>Nội dung khuyễn mãi: Đáp ứng các yêu cầu gửi tiền và nhận phần thưởng gửi tiền lần đầu</span>
+            </li>
+          </ul>
         </div>
-        <div class="w-2/4 text-center self-end">
-          <img src="@/assets/images/txt-reg.png" class="txt-img" alt="" />
-        </div>
-      </div>
-      <div class="w-full flex">
-        <div class="w-1/4 flex box-1 justify-center items-center">
-          <span class="text-xs-small py-4">Tất cả khuyến mãi</span>
-        </div>
-        <div class="w-3/4">
-          <div class="w-2/6 inline-block text-center">
-            <p class="text-small py-1 w-95 border-bot">Khuyến mãi mới</p>
-          </div>
-          <div class="w-2/6 inline-block text-center">
-            <p class="text-small py-1 w-95 border-bot">Khuyến mãi chung</p>
-          </div>
-          <div class="w-2/6 inline-block text-center">
-            <p class="text-small py-1 w-95 border-bot">Điện tử/Bắn cá/Đá gà</p>
-          </div>
-          <div class="w-2/6 inline-block text-center">
-            <p class="text-small py-1 w-95 border-bot">Game bài</p>
-          </div>
-          <div class="w-2/6 inline-block text-center">
-            <p class="text-small py-1 w-95 border-bot">Thể thao/Esports</p>
-          </div>
-          <div class="w-2/6 inline-block text-center">
-            <p class="text-small py-1 w-95 border-bot">Live Casino</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex w-full">
-        <div class="w-1/4 flex justify-center items-center">
-          <img src="@/assets/images/icon1.png" class="icon-1 mr-1" alt="" />
-          <span class="text-xs text-red-500 py-2">Thông báo: </span>
-        </div>
-        <div class="w-3/4 flex items-center">
-          <marquee width="100%" behavior="scroll">
-            <ul class="flex">
-              <li class="mx-3 text-xs sm:text-sm float-left item-mq">
-                <strong class="text-red-500 pr-1 text-xs">Event</strong>
-                <a class="text-red-500 text-xs" href="#" target="_blank">Nội dung thông báo</a>
-              </li>
-              <li class="mx-3 text-xs sm:text-sm float-left item-mq">
-                <strong class="text-red-500 pr-1 text-xs">Event</strong>
-                <a class="text-red-500 text-xs" href="#" target="_blank">Nội dung thông báo</a>
-              </li>
-            </ul>
-          </marquee>
-        </div>
-      </div>
-      <div class="px-4 sm:px-8 mt-2">
-        <div class="section-1 flex">
-          <div class="w-8/12">
-            <div class="relative bg-1">
-              <div class="absolute bg-abs text-center w-full h-full">
-                <div class="flex bg-btn items-center justify-center">
-                  <el-button class="btn-1"> Chi tiết KM </el-button>
-                  <el-button class="btn-2"> Đăng ký KM </el-button>
-                </div>
-              </div>
-            </div>
-            <el-row class="mt-3">
-              <el-col :span="24">
-                <div class="bg-demo bg-only"></div>
-              </el-col>
-            </el-row>
-          </div>
-          <div class="w-4/12">
-            <div class="w-95 h-full ml-2 relative">
-              <div class="box-inf flex flex-col justify-center items-center">
-                <img src="@/assets/images/profile.png" class="img-inf mb-1" alt="" />
-                <small class="text-small">Trung tâm cá nhân</small>
-              </div>
-              <div class="box-bot-inf mt-3 bg-only"></div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-3 flex">
-          <div class="bg-demo box-custom bg-only"></div>
-          <div class="bg-demo box-custom bg-only"></div>
-          <div class="bg-demo box-custom bg-only"></div>
-        </div>
-        <div class="mt-3 flex">
-          <div class="bg-demo box-custom bg-only"></div>
-          <div class="bg-demo box-custom bg-only"></div>
-          <div class="bg-demo box-custom bg-only"></div>
-        </div>
-        <div class="mt-3 flex box-end">
-          <div class="bg-demo bg-only"></div>
-        </div>
-      </div>
-      <div class="bar-bot w-full">
-        <ul class="w-full">
-          <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/home.png" class="icon-bot" alt="ic" />
-            <small class="text-white text-xs">Trang chủ</small>
-          </li>
-          <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/cskh.png" class="icon-bot" alt="ic" />
-            <small class="text-white text-xs">CSKH 24/7</small>
-          </li>
-          <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/taiapp.png" class="icon-bot" alt="ic" />
-            <small class="text-white text-xs">Tải app</small>
-          </li>
-          <li class="w-1/4 flex flex-col justify-center items-center">
-            <img src="@/assets/images/tailai.png" class="icon-bot" alt="ic" />
-            <small class="text-white text-xs">Tải lại</small>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -122,7 +44,6 @@
 <script lang="ts">
 import Component from 'vue-class-component';
 import { Vue } from 'vue-property-decorator';
-import router from 'router';
 import { mapGetters } from 'vuex';
 
 @Component({
@@ -135,5 +56,42 @@ export default class Landing extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import 'index.scss';
+.img-banner {
+  max-height: 200px;
+}
+.text-red {
+  color: red;
+}
+.box-content {
+  box-shadow: 1px 0px 3px 1px #ccc;
+  border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.content {
+  ul {
+    margin-left: 0;
+    margin-right: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+.btn-reg {
+  background: #8d1242;
+  color: #fff;
+  font-size: 16px;
+}
+
+.number-order {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #ccc;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 13px;
+  margin-right: 5px;
+}
 </style>
