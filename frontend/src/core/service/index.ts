@@ -78,7 +78,7 @@ export default class Service {
         headers: {
           ...(this.headers || {}),
           ...headers,
-          Authorization: token ? `Bearer ${token}` : '',
+          // Authorization: token ? `Bearer ${token}` : '',
         },
       };
       const response = await this.axios.request(opts);

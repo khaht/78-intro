@@ -86,7 +86,7 @@ export default class App extends Vue {
 @import '~nprogress/nprogress.css';
 @import '~@/assets/scss/style.scss';
 .text-small {
-  font-size: 10px;
+  font-size: 9px;
   color: #cfaa80;
 }
 .text-xs-small {
@@ -128,6 +128,7 @@ export default class App extends Vue {
   background: linear-gradient(60deg, rgba(144, 18, 66, 1) 0%, rgba(107, 13, 49, 1) 35%, rgba(75, 9, 36, 1) 100%);
   width: 100%;
   bottom: 0;
+  z-index: 9999;
   li {
     float: left;
     border-right: solid 1px #fff;

@@ -6,10 +6,10 @@ import { HomeState } from './types';
 import { RootState } from 'store/types';
 
 export const state: HomeState = {
+  news: [],
+  notices: [],
   device: 'desktop',
-  siteInfo: localStorage.getItem('site_info')
-    ? JSON.parse(localStorage.getItem('site_info') || '')
-    : {},
+  siteInfo: localStorage.getItem('site_info') ? JSON.parse(localStorage.getItem('site_info') || '') : {},
   screenSize: {
     w: window.innerWidth,
     h: window.innerHeight,

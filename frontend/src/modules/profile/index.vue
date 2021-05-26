@@ -1,7 +1,8 @@
 <template>
   <div class="pb-16">
-    <div class="banner text-center py-2 mt-2">
-      <span class="text-white font-bold text-lg">Selina</span>
+    <div class="banner text-center py-2 mt-2 justify-center flex items-center">
+      <span class="text-white font-bold text-lg">{{ profile.userId }}</span>
+      <img class="mr-3 img-logout" @click="logout" src="@/assets/images/icon-logout.png" width="15" alt="" />
     </div>
     <div class="mt-10 px-10">
       <div class="border p-4 text-center shadow rounded mb-2">
@@ -61,12 +62,20 @@
 <script lang="ts">
 import Component from 'vue-class-component';
 import { Vue } from 'vue-property-decorator';
-import { mapGetters } from 'vuex';
+import { ResponseMsg } from 'store/types';
+import { mapGetters, mapActions } from 'vuex';
+import { ACCESS_TOKEN_KEY } from 'core/constants';
+import { IUserBonusByPage } from './store/types';
+import router from 'router';
 
 @Component({
   components: {},
   computed: {
-    ...mapGetters('home', ['device']),
+    ...mapGetters('profile', ['latestPromo', 'profile']),
+  },
+  methods: {
+    ...mapActions('profile', ['actGetUserBonusByPage']),
+    ...mapActions('auth', ['actLogout']),
   },
 })
 export default class Profile extends Vue {
@@ -92,10 +101,32 @@ export default class Profile extends Vue {
       address: 'No. 189, Grove St, Los Angeles',
     },
   ];
+  public profile!: any;
+  public actGetUserBonusByPage!: (data: IUserBonusByPage) => Promise<ResponseMsg>;
+  public actLogout!: () => void;
+
+  public logout() {
+    this.actLogout();
+    router.push({ name: 'login' });
+  }
+
+  public created() {
+    // this.actGetUserBonusByPage({
+    //   PlatFormCode: '78win',
+    //   UserID: this.profile.userId,
+    //   SesionID: localStorage.getItem(ACCESS_TOKEN_KEY) || '',
+    // }).catch(() => {
+    //   this.$message.error('Không thể lấy dữ liệu');
+    // });
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.img-logout {
+  position: absolute;
+  right: 0;
+}
 .banner {
   background: rgb(144, 18, 66);
   background: linear-gradient(278deg, rgba(144, 18, 66, 1) 17%, rgba(107, 13, 49, 1) 50%, rgba(75, 9, 36, 1) 100%);

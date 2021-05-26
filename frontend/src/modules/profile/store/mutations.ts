@@ -1,8 +1,8 @@
 import { MutationTree } from 'vuex';
-import { ConstraintState, SET_NOTIF } from './types';
+import { ProfileState, SET_LATEST_PROMO } from './types';
 
-export const mutations: MutationTree<ConstraintState> = {
-  // [SET_NOTIF](state: ConstraintState, data: any[]) {
-  //   state.notif = data;
-  // },
+export const mutations: MutationTree<ProfileState> = {
+  [SET_LATEST_PROMO](state: ProfileState, data: any[]) {
+    state.latestPromo = data;
+  },
 };

@@ -1,56 +1,22 @@
 import { ActionTree } from 'vuex';
-import { ConstraintState } from './types';
-import { RootState } from 'store/types';
-import { ConstraintInfServices } from '../service';
-import { ResponseMessage, CheckUserInfoInput, SendMsgInput, BindingUserInfoInput } from 'models';
+import { ProfileState, SET_LATEST_PROMO, IUserBonusByPage } from './types';
+import { ResponseMsg, RootState } from 'store/types';
+import { ProfileServices } from '../service';
 
-const service = new ConstraintInfServices();
+const service = new ProfileServices();
 
-export const actions: ActionTree<ConstraintState, RootState> = {
-  actCheckUserAccount({ commit }, usrNm: string) {
+export const actions: ActionTree<ProfileState, RootState> = {
+  actGetUserBonusByPage({ commit }, data: IUserBonusByPage) {
     return new Promise((resolve, reject) => {
       service
-        .checkUserAccount(usrNm)
-        .then((res: ResponseMessage) => {
+        .getUserBonusByPage(data)
+        .then((res: ResponseMsg) => {
+          commit(SET_LATEST_PROMO, res.Data.data || []);
           resolve(res);
         })
         .catch((err: Error) => {
           reject(err);
         });
     });
-  },
-  actSendMsg({ commit }, data: SendMsgInput) {
-    return new Promise((resolve, reject) => {
-      service
-        .sendMsg(data)
-        .then((res: ResponseMessage) => {
-          resolve(res);
-        })
-        .catch((err: Error) => {
-          reject(err);
-        });
-    });
-  },
-  actBindingUsrInf({ commit }, data: BindingUserInfoInput) {
-    return new Promise((resolve, reject) => {
-      service
-        .bindingUserInfo(data)
-        .then((res: ResponseMessage) => {
-          resolve(res);
-        })
-        .catch((err: Error) => {
-          reject(err);
-        });
-    });
-  },
-  actCheckUserInfo({ commit }, data: CheckUserInfoInput) {
-    return service
-      .checkUserInfo(data)
-      .then((res: ResponseMessage) => {
-        return res;
-      })
-      .catch((err: Error) => {
-        throw new Error(err.message);
-      });
   },
 };

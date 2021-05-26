@@ -12,7 +12,7 @@ export const state: ConstraintState = {
 
 const namespaced: boolean = true;
 
-export const constraint: Module<ConstraintState, RootState> = {
+export const promotion: Module<ConstraintState, RootState> = {
   namespaced,
   state,
   getters,

@@ -10,11 +10,11 @@
               label="Tên đăng nhập:"
               label-width="130px"
             >
-              <el-input prefix-icon="el-icon-user" type="text" v-model.number="formGeneral.name"></el-input>
+              <el-input prefix-icon="el-icon-user" type="text" v-model="formGeneral.name"></el-input>
             </el-form-item>
 
             <div class="flex f-item-custom">
-              <el-form-item :rules="ruleNumber" prop="num1" label="6 số cuối của SĐT:" label-width="130px">
+              <el-form-item :rules="ruleNumber" prop="num1" label="4 số cuối của SĐT:" label-width="150px">
                 <el-input
                   @input="(value) => nextFocus(value, 1, 'input2')"
                   type="text"
@@ -41,25 +41,7 @@
                 ></el-input>
               </el-form-item>
               <el-form-item :rules="ruleNumber" prop="num4" label="" label-width="0px">
-                <el-input
-                  @input="(value) => nextFocus(value, 1, 'input5')"
-                  ref="input4"
-                  type="text"
-                  :maxlength="1"
-                  v-model.number="formGeneral.num4"
-                ></el-input>
-              </el-form-item>
-              <el-form-item :rules="ruleNumber" prop="num5" label="" label-width="0px">
-                <el-input
-                  @input="(value) => nextFocus(value, 1, 'input6')"
-                  ref="input5"
-                  type="text"
-                  :maxlength="1"
-                  v-model.number="formGeneral.num5"
-                ></el-input>
-              </el-form-item>
-              <el-form-item :rules="ruleNumber" prop="num6" label="" label-width="0px">
-                <el-input ref="input6" type="text" :maxlength="1" v-model.number="formGeneral.num6"></el-input>
+                <el-input ref="input4" type="text" :maxlength="1" v-model.number="formGeneral.num4"></el-input>
               </el-form-item>
             </div>
           </div>
@@ -74,9 +56,9 @@
       <div class="mt-8">
         <p class="text-black font-bold">Thông tin nổi bật</p>
         <ul class="mt-4">
-          <li>
-            <span>1. </span>
-            <span class="inline-block">abc</span>
+          <li class="flex justify-end">
+            <span class="self-end">1. </span>
+            <span class="w-full inline-block h-20 mt-3 bg-only"></span>
           </li>
         </ul>
       </div>
@@ -87,13 +69,18 @@
 import Component from 'vue-class-component';
 import { Vue } from 'vue-property-decorator';
 import { mapGetters, mapActions } from 'vuex';
+import { ILogin } from './store/types';
+import { ResponseMsg } from 'store/types';
 import router from 'router';
 
 @Component({
   components: {},
   computed: {
     ...mapGetters('home', ['device']),
-    ...mapActions('auth', ['actLogin']),
+    ...mapGetters('auth', ['news']),
+  },
+  methods: {
+    ...mapActions('auth', ['actLogin', 'actGet78winPromoCenter']),
   },
 })
 export default class Login extends Vue {
@@ -103,6 +90,8 @@ export default class Login extends Vue {
     { required: true, message: ' ', trigger: 'blur' },
     { type: 'number', message: ' ', trigger: 'blur' },
   ];
+  public actLogin!: (account: any) => Promise<any>;
+  public actGet78winPromoCenter!: () => Promise<any>;
 
   public nextFocus(value: string, maxlength: number, refNextNm: string) {
     if (value.length === maxlength) {
@@ -114,37 +103,40 @@ export default class Login extends Vue {
     router.push({ path: '/' });
   }
 
+  public created() {
+    this.actGet78winPromoCenter();
+  }
+
   public handldeLogin() {
     (this.$refs.formGeneral as any).validate((valid: boolean) => {
       if (valid) {
         this.loadingBtn = true;
-        // const data: CheckUserInfoInput = {
-        //   accountName: this.form.accountName,
-        //   signa: this.form.signa,
-        //   bankNum: `${this.formGeneral.num1}${this.formGeneral.num2}${this.formGeneral.num3}${this.formGeneral.num4}${this.formGeneral.num5}${this.formGeneral.num6}`,
-        //   name: this.formGeneral.name,
-        //   lastLogin: `${this.formGeneral.year}-${this.formGeneral.month}-${this.formGeneral.date}`,
-        // };
-        // this.actCheckUserInfo(data)
-        //   .then((res: ResponseMessage) => {
-        //     if (+res.code === 200) {
-        //       this.loadingBtn = false;
-        //       this.msgSuccess = 'Liên kết cố định tài khoản thành công!';
-        //       this.step++;
-        //       return;
-        //     } else if (+res.code === 5004) {
-        //       this.loadingBtn = false;
-        //       this.msgSuccess = res.msg;
-        //       this.step = 4;
-        //     } else {
-        //       this.loadingBtn = false;
-        //       this.$message.warning(res.msg);
-        //     }
-        //   })
-        //   .catch(() => {
-        //     this.loadingBtn = false;
-        //     this.$message.error('Có lỗi xảy ra');
-        //   });
+        const data: ILogin = {
+          PlatFormCode: '78win',
+          UserPhone: `${this.formGeneral.num1}${this.formGeneral.num2}${this.formGeneral.num3}${this.formGeneral.num4}`,
+          UserID: this.formGeneral.name,
+        };
+        this.actLogin(data)
+          .then((res: ResponseMsg) => {
+            this.loadingBtn = false;
+            const { Code } = res;
+            if (res.IsSuccessful) {
+              router.push({ path: '/' });
+            } else {
+              switch (+Code) {
+                case 2109:
+                  this.$message.error('Số điện thoại không đúng');
+                  break;
+                case 2005:
+                  this.$message.error('Tên đăng nhập không đúng');
+                  break;
+              }
+            }
+          })
+          .catch(() => {
+            this.loadingBtn = false;
+            this.$message.error('Có lỗi xảy ra');
+          });
       }
     });
   }
@@ -163,17 +155,17 @@ export default class Login extends Vue {
   .el-input__inner {
     padding: 0;
     text-align: center;
-    width: 30px;
-    height: 30px;
-    margin-right: 4px;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
   }
 }
 /deep/ .el-form-item__label {
   &::before {
     color: #fff !important;
   }
-  font-size: 12px;
   text-align: left;
+  font-size: 13px;
 }
 /deep/ .el-input__icon {
   font-size: 25px;
@@ -189,6 +181,6 @@ export default class Login extends Vue {
 .btn-login,
 .btn-next {
   border-radius: 10px;
-  width: 110px;
+  width: 140px;
 }
 </style>

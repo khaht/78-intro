@@ -1,9 +1,12 @@
 import { GetterTree } from 'vuex';
-import { ConstraintState } from './types';
+import { ProfileState } from './types';
 import { RootState } from 'store/types';
 
-export const getters: GetterTree<ConstraintState, RootState> = {
-  // notifs(state: ConstraintState): any {
-  //   return state.notif;
-  // },
+export const getters: GetterTree<ProfileState, RootState> = {
+  latestPromo(state: ProfileState) {
+    return state.latestPromo;
+  },
+  profile(state: ProfileState) {
+    return state.profile;
+  },
 };

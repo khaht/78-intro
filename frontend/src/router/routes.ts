@@ -1,15 +1,25 @@
 import { lazyLoadView } from 'core/utils';
 
-const Landing = () => lazyLoadView(import('modules/landing/index.vue'));
+const Promotion = () => lazyLoadView(import('modules/promotion/index.vue'));
 const Profile = () => lazyLoadView(import('modules/profile/index.vue'));
 const Login = () => lazyLoadView(import('modules/auth/index.vue'));
+const Home = () => lazyLoadView(import('modules/home/index.vue'));
 export default [
   {
-    path: '/',
-    name: 'landing',
-    component: Landing,
+    path: '/promotion',
+    name: 'promotion',
+    component: Promotion,
     meta: {
-      authRequired: false,
+      authRequired: true,
+      hideFooter: false,
+    },
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+    meta: {
+      authRequired: true,
       hideFooter: false,
     },
   },
@@ -27,7 +37,7 @@ export default [
     name: 'profile',
     component: Profile,
     meta: {
-      authRequired: false,
+      authRequired: true,
       hideFooter: false,
     },
   },

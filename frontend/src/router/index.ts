@@ -30,14 +30,12 @@ router.beforeEach(async (to, from, next) => {
   await loadLanguageAsync(lang);
 
   document.title = to.meta.title || '78win';
-  const isLoginPage = to.matched.some(
-    (p: any) => p.path.indexOf('login') === 0,
-  );
+  const isLoginPage = to.matched.some((p: any) => p.path.indexOf('/login') === 0);
   try {
     const isAuthenticated = store.getters['auth/isAuthenticated'];
     const requiresAuth = to.matched.some((r: any) => r.meta.authRequired);
     if (isAuthenticated && isLoginPage) {
-      return next();
+      return next('/');
     }
 
     if (requiresAuth && !isAuthenticated) {
