@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="px-4 mt-8 pb-4">
-      <p class="font-bold">5 khuyến mãi tham gia gần đây</p>
+      <p class="font-bold text-sm">5 khuyến mãi tham gia gần đây</p>
       <div class="box-table banner rounded mt-4 p-4">
         <el-table
           row-class-name="row-style"
@@ -37,7 +37,11 @@
       </div>
     </div>
     <div class="px-4 mt-8 pb-16">
-      <p class="font-bold">5 đơn đăng ký khuyến mãi gần nhất</p>
+      <div class="flex justify-between">
+        <p class="font-bold text-sm">5 đơn đăng ký khuyến mãi gần nhất</p>
+        <p class="text-sm text-blue-500 underline">Xem thêm</p>
+      </div>
+
       <div class="box-table banner rounded mt-4 p-4">
         <el-table
           row-class-name="row-style"

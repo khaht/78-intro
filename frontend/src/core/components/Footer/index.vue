@@ -5,11 +5,17 @@
         <img src="@/assets/images/home.png" class="icon-bot" alt="ic" />
         <small class="text-white text-xs">Trang chủ</small>
       </li>
-      <li class="w-1/4 flex flex-col justify-center items-center">
+      <li
+        @click="redirectExternalLink('https://direct.lc.chat/12600750/')"
+        class="w-1/4 flex flex-col justify-center items-center"
+      >
         <img src="@/assets/images/cskh.png" class="icon-bot" alt="ic" />
         <small class="text-white text-xs">CSKH 24/7</small>
       </li>
-      <li class="w-1/4 flex flex-col justify-center items-center">
+      <li
+        @click="redirectExternalLink('http://www.78win.vn/download')"
+        class="w-1/4 flex flex-col justify-center items-center"
+      >
         <img src="@/assets/images/taiapp.png" class="icon-bot" alt="ic" />
         <small class="text-white text-xs">Tải app</small>
       </li>
@@ -38,6 +44,9 @@ export default class Landing extends Vue {
   }
   public gotoHome() {
     router.push({ path: '/' });
+  }
+  public redirectExternalLink(link: string) {
+    window.open(link, '_blank');
   }
 }
 </script>
