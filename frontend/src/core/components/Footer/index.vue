@@ -1,27 +1,37 @@
 <template>
-  <div class="bar-bot w-full">
-    <ul class="w-full">
-      <li @click="gotoHome" class="w-1/4 flex flex-col justify-center items-center">
-        <img src="@/assets/images/home.png" class="icon-bot" alt="ic" />
-        <small class="text-white text-xs">Trang chủ</small>
+  <div class="footer" v-if="device==='mobile'">
+    <ul class="footer-menu">
+      <li>
+        <router-link to="/">
+          <div class="flex">
+            <img src="@/assets/images/mobile/7.png">
+            <span>Trò chơi điện tử</span>
+          </div>
+        </router-link>
       </li>
-      <li
-        @click="redirectExternalLink('https://direct.lc.chat/12600750/')"
-        class="w-1/4 flex flex-col justify-center items-center"
-      >
-        <img src="@/assets/images/cskh.png" class="icon-bot" alt="ic" />
-        <small class="text-white text-xs">CSKH 24/7</small>
+      <li>
+        <router-link to="/">
+          <div class="flex">
+            <img src="@/assets/images/mobile/8.png">
+            <span>Game bài 3D</span>
+          </div>
+        </router-link>
       </li>
-      <li
-        @click="redirectExternalLink('http://www.78win.vn/download')"
-        class="w-1/4 flex flex-col justify-center items-center"
-      >
-        <img src="@/assets/images/taiapp.png" class="icon-bot" alt="ic" />
-        <small class="text-white text-xs">Tải app</small>
+      <li>
+        <router-link to="/">
+          <div class="flex">
+            <img src="@/assets/images/mobile/9.png">
+            <span>Thể loại khác</span>
+          </div>
+        </router-link>
       </li>
-      <li @click="gotoProfile" class="w-1/4 flex flex-col justify-center items-center">
-        <img src="@/assets/images/icon-user.png" class="icon-bot" alt="ic" />
-        <small class="text-white text-xs">Tài khoản của tôi</small>
+      <li>
+        <router-link to="/">
+          <div class="flex">
+            <img src="@/assets/images/mobile/10.png">
+            <span>Hợp tác đại lý</span>
+          </div>
+        </router-link>
       </li>
     </ul>
   </div>

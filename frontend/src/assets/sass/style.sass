@@ -1,1 +1,320 @@
-@import "variables"
+@import 'tailwind.min.scss'
+@import "variables.sass"
+
+body
+  overflow: hidden
+a
+  color: $primary-color!important
+  &:hover
+    color: #176761!important
+.home
+  background: url(~@/assets/images/bg/bg.png) no-repeat top
+  background-size: cover
+
+.section1
+  position: relative
+  .bg
+    background: url(~@/assets/images/bg/bg1.jpg) no-repeat top
+    width: 100%
+    background-size: cover
+    min-height: calc(100vh - 67px)
+    position: absolute
+    top: 0
+    left: 0
+.first-qc
+  position: relative
+  z-index: 1
+  .flex
+    padding-top: 50px
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+  .text
+    position: absolute
+    width: 100%
+    top: 65%
+    left: 50%
+    transform: translate(-50%, -50%)
+    img
+      margin: auto
+    h2
+      font-size: 5.3rem
+      text-shadow: 4px 8px 4px rgba(0, 0, 0, 1)
+      color: #269ce6
+    h3
+      font-size: 2.8rem
+      color: #f6d355
+      text-shadow: 4px 8px 4px rgba(0, 0, 0, 1)
+  .img-1
+    img
+      width: 340px
+  .img-2
+    img
+      width: 290px
+  .img-3
+    img
+      width: 340px
+
+.section2
+  .wrap-qc
+    margin-top: -60px
+    width: 85%
+    margin-left: auto
+    margin-right: auto
+    background-color: rgba(0, 0, 0, .6)
+    border-radius: 20px
+    padding: 60px 50px
+    .qc
+      display: flex
+      justify-content: space-between
+      align-items: center
+    .text1
+      margin-top: 70px
+.wrap-frame
+  width: 90%
+  margin: auto
+  .frame
+    position: relative
+    width: 100%
+    height: 0
+    padding-bottom: 57.66%
+    background: url(~@/assets/images/icons/frame.png) no-repeat
+    background-size: cover
+    .left
+      position: absolute
+      left: -50%
+      z-index: 2
+      width: 62%
+    .right
+      position: absolute
+      right: -50%
+      z-index: 2
+      width: 62%
+    .left1
+      left: -42%
+    .right1
+      right: -43%
+    .left2
+      left: -46%
+    .right2
+      right: -56%
+    .left3
+      left: -38%
+    .right3
+      right: -54%
+    .center
+      width: calc(100% - 87px)
+      height: calc(100% - 77px)
+      position: absolute
+      background: black
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 3
+      .content
+        width: 100%
+        height: 100%
+.big-space
+  height: 100px
+.big-margin
+  margin-top: 100px
+.footer-menu
+  display: none
+.wrap-image
+  width: 100%
+  height: 100%
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.content.tab
+  background-image: url(~@/assets/images/icons/23.png)
+  background-size: cover
+  background-color: $primary-color
+  .detail
+    width: 90%
+    height: 375px
+    margin: auto
+    background-color: white
+    border-radius: 30px
+    border: solid 4px #ececec
+    padding: 20px
+    padding-right: 15px
+    -webkit-box-shadow: inset 0px 0px 7px 0px #000000
+    box-shadow: inset 0px 0px 7px 0px #000000
+    >div
+      overflow: auto
+      height: 100%
+      .km
+        font-size: 25px
+        white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
+        padding: 5px 10px
+    &.green
+      background-color: $primary-color
+    &.login
+      background: url(~@/assets/images/icons/42.png)
+      background-size: 125%
+      background-position: center
+.bxh-logo
+  img
+    height: 40px
+    margin: auto
+
+.el-carousel__container, .el-carousel
+  widht: 100%!important
+  height: 100%!important
+
+.el-tabs__nav
+  display: flex
+  width: 100%
+  height: 60px
+  align-items: center
+  justify-content: center
+  background: #2bb6ac
+
+.el-tabs__item
+  width: 50%
+
+.el-tabs__item span
+  display: flex
+  justify-content: center
+  font-size: 18px
+  color: white
+  font-weight: bold
+  align-items: center
+
+.el-tabs__active-bar
+  height: 3px!important
+  background: white!important
+.login-btn
+  width: 250px
+
+@media screen and (max-width: 1407px)
+  .content.tab
+    .detail
+      height: 290px
+      padding: 20px
+      >div
+        .km
+          font-size: 20px
+  .el-tabs__item img
+    height: 30px!important
+
+
+@media screen and (max-width: 1215px)
+  .content.tab
+    .detail
+      height: 210px
+  .el-tabs__item span
+    font-size: 16px
+  .el-tabs__item img
+    height: 20px!important
+
+@media screen and (max-width: 1124px)
+  .content.tab
+    .detail
+      height: 365px
+  .frame
+    .left, .right
+      display: none
+  .section2
+    .wrap-qc
+      width: 100%
+      padding: 60px 20px
+  .wrap-frame
+    width: 100%
+
+@media screen and (max-width: 1023px)
+  .content.tab
+    .detail
+      height: 255px
+
+@media screen and (max-width: 768px)
+  .section2 .wrap-qc
+    padding: 60px 15px
+  .content.tab
+    .detail
+      height: 235px
+  .wrap-frame .frame .center
+    width: calc(100% - 56px)
+    height: calc(100% - 50px)
+  .section1
+    .bg,.first-qc
+      display: none
+  .home
+    padding-top: 40px
+    background: url(~@/assets/images/mobile/bg.png) no-repeat top
+  .footer
+    padding: 0!important
+    .footer-menu
+      display: flex
+      width: 100%
+      position: fixed
+      bottom: 0
+      overflow: hidden
+      z-index: 10
+      li
+        flex: auto
+        &:last-child
+          .flex
+            border-right: none
+        .flex
+          background-color: white
+          border-right: solid 1px #303030
+          display: flex
+          flex-direction: column
+          padding: 10px
+          text-transform: uppercase
+          color: $primary-color
+          font-family: Avo, sans-serif
+          font-size: 14px
+          height: 100%
+          &:hover
+            background-color: #1a202c
+          img
+            height: 40px
+            margin: auto
+            margin-bottom: 5px
+          span
+            flex: 1
+            text-align: center
+  .section2
+    .wrap-qc
+      background: unset
+      margin-top: 0
+      .qc
+        justify-content: center
+      .img-1
+        max-width: 400px
+
+@media screen and (max-width: 768px)
+  .content.tab
+    .detail
+      width: 97%
+      padding: 5px
+      >div
+        .km
+          font-size: 14px
+  .el-tabs__nav
+    height: 40px
+  .el-tabs__item span
+    font-size: 10px!important
+  .el-tabs__item img
+    height: 20px!important
+  .login-btn
+    width: 150px
+  .content.tab
+    .detail.login
+      background-size: cover
+
+@media screen and (max-width: 550px)
+  .el-tabs__item
+    padding: 0!important
+    img
+      display: none
+  .hidden-xs
+    display: none

@@ -4,6 +4,7 @@ const Promotion = () => lazyLoadView(import('modules/promotion/index.vue'));
 const Profile = () => lazyLoadView(import('modules/profile/index.vue'));
 const Login = () => lazyLoadView(import('modules/auth/index.vue'));
 const Home = () => lazyLoadView(import('modules/home/index.vue'));
+const Home2 = () => lazyLoadView(import('modules/home/index2.vue'));
 export default [
   {
     path: '/promotion',
@@ -16,28 +17,10 @@ export default [
   },
   {
     path: '/',
-    name: 'home',
-    component: Home,
-    meta: {
-      authRequired: true,
-      hideFooter: false,
-    },
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: Login,
+    name: 'home2',
+    component: Home2,
     meta: {
       authRequired: false,
-      hideFooter: false,
-    },
-  },
-  {
-    path: '/profile',
-    name: 'profile',
-    component: Profile,
-    meta: {
-      authRequired: true,
       hideFooter: false,
     },
   },

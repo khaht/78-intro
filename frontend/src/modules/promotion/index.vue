@@ -1,7 +1,6 @@
 <template>
   <div class="pb-16">
     <div class="banner">
-      <img class="img-banner" src="@/assets/images/banner.png" alt="" />
     </div>
     <div class="text-center my-4">
       <el-button class="btn-reg">Đăng ký</el-button>

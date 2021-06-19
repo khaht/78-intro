@@ -2,7 +2,6 @@
   <div class="pb-16">
     <div class="banner text-center py-2 mt-2 justify-center flex items-center">
       <span class="text-white font-bold text-lg">{{ profile.userId }}</span>
-      <img class="mr-3 img-logout" @click="logout" src="@/assets/images/icon-logout.png" width="15" alt="" />
     </div>
     <div class="mt-10 px-10">
       <div class="border p-4 text-center shadow rounded mb-2">
