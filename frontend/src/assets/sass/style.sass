@@ -78,9 +78,9 @@ a
     position: relative
     width: 100%
     height: 0
-    padding-bottom: 57.66%
+    padding-bottom: 60%
     background: url(~@/assets/images/icons/frame.png) no-repeat
-    background-size: cover
+    background-size: 100% 100%
     .left
       position: absolute
       left: -50%
@@ -135,18 +135,18 @@ a
   background-color: $primary-color
   .detail
     width: 90%
-    height: 375px
+    height: 396px
     margin: auto
     background-color: white
     border-radius: 30px
     border: solid 4px #ececec
-    padding: 20px
-    padding-right: 15px
+    padding: 10px
     -webkit-box-shadow: inset 0px 0px 7px 0px #000000
     box-shadow: inset 0px 0px 7px 0px #000000
     >div
-      overflow: auto
-      height: 100%
+      &.scroll
+        overflow: auto
+        height: 100%
       .km
         font-size: 25px
         white-space: nowrap
@@ -193,19 +193,138 @@ a
 .login-btn
   width: 250px
 
-@media screen and (max-width: 1407px)
-  .content.tab
-    .detail
-      height: 290px
-      padding: 20px
-      >div
-        .km
-          font-size: 20px
-  .el-tabs__item img
-    height: 30px!important
+.top-frame
+  padding-left: 30px
+.wrap-top
+  .top
+    width: 100%
+    height: 0
+    padding-bottom: 31.76%
+    position: relative
+    background-size: 100%
+    background-repeat: no-repeat
+    &.top1
+      background-image: url(~@/assets/images/icons/1ts.png)
+      .absolute
+        top: 22%
+        left: 29%
+      .score
+        top: 28%
+        left: 47.5%
+    &.top2
+      background-image: url(~@/assets/images/icons/2nd.png)
+    &.top3
+      background-image: url(~@/assets/images/icons/3rd.png)
+    .absolute
+      position: absolute
+      top: 21%
+      left: 29%
+    .img
+      width: 45px
+      height: 45px
+      border-radius: 50%
+      position: relative
+      border: solid 4px white
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .score
+      text-align: center
+      position: absolute
+      width: 43%
+      top: 22%
+      left: 47.5%
+      .name
+        font-weight: bold
+        color: white
+        white-space: nowrap
+        overflow: 
+        text-overflow: ellipsis
+      .numb
+        font-weight: bold
+        color: yellow
+        line-height: 12px
+        white-space: nowrap
+        overflow: 
+        text-overflow: ellipsis
+
+.wrap-rank
+  padding: 16px
+  padding-right: 0
+  height: 100%
+  .rank
+    width: 100%
+    height: 0
+    padding-bottom: 16.35%
+    position: relative
+    background-image: url(~@/assets/images/icons/rank.png)
+    background-size: cover
+    margin-bottom: 5px
+    .absolute
+      position: absolute
+      top: 10%
+      left: 2%
+      .img
+        width: 45px
+        height: 45px
+        border-radius: 50%
+        position: relative
+        border: solid 4px white
+        img
+          position: absolute
+          width: 100%
+          height: 100%
+          object-fit: cover
+    .score
+      text-align: left
+      position: absolute
+      width: 65%
+      top: 16%
+      left: 17.5%
+      .name
+        font-weight: bold
+        color: white
+        white-space: nowrap
+        overflow: 
+        text-overflow: ellipsis
+      .numb
+        font-weight: bold
+        color: yellow
+        line-height: 12px
+        white-space: nowrap
+        overflow: 
+        text-overflow: ellipsis
+    .stt
+      color: white
+      font-weight: bold
+      position: absolute
+      right: 10%
+      top: 45%
+      right: 7.5%
+      top: 22%
+      font-size: 20px
+      width: 20px
+      text-align: center
+  .el-carousel__indicator
+    padding-right: 0
+  .el-carousel__indicators
+    margin: 0
+    list-style-type: none
+  .el-carousel
+    padding-right: 20px
+    .el-carousel__button
+      width: 10px
+      height: 10px
+      border-radius: 50%
+
+// @media screen and (max-width: 1550px)
 
 
-@media screen and (max-width: 1215px)
+@media only screen and (min-width: 1125px) and (max-width: 1550px) 
+  .bxh-logo img
+    height: 30px
   .content.tab
     .detail
       height: 210px
@@ -213,11 +332,83 @@ a
     font-size: 16px
   .el-tabs__item img
     height: 20px!important
+  .wrap-frame
+    width: 72%
+  .content.tab .detail
+    height: 304px
+  .wrap-rank
+    padding: 6px 8px
+  .wrap-rank .rank .absolute .img,.wrap-top .top .img
+    width: 35px;
+    height: 35px;
+  .wrap-top .top .score,.wrap-rank .rank .score
+    font-size: 12px
+  .wrap-rank .rank .score
+    top: 9%
+  .wrap-rank .rank .stt
+    right: 7%
+    font-size: 16px
 
+@media screen and (min-width: 1216px) and (max-width: 1407px)
+  .content.tab
+    .detail
+      height: 290px
+      padding: 10px
+      >div
+        .km
+          font-size: 20px
+  .el-tabs__item img
+    height: 30px!important
+
+  .content.tab
+    .detail
+      height: 268px
+  .el-tabs__item span
+    font-size: 10px
+  .el-tabs__item img
+    height: 15px!important
+
+  .wrap-rank .rank .absolute .img,.wrap-top .top .img
+    width: 28px;
+    height: 28px;
+  .wrap-top .top .score,.wrap-rank .rank .score
+    font-size: 10px
+  .wrap-rank .rank .score
+    top: 9%
+  .wrap-rank .rank .stt
+    right: 7%
+    font-size: 16px
+  .wrap-top .top .score
+    top: 18%
+  .wrap-top .top.top1 .score
+    top: 26%
+
+
+@media screen and (min-width: 1125px) and (max-width: 1215px)
+  .el-tabs__nav
+    height: 40px
+  .wrap-rank .rank .absolute .img,.wrap-top .top .img
+    width: 20px;
+    height: 20px;
+  .wrap-top .top .score,.wrap-rank .rank .score
+    font-size: 6px
+  .wrap-rank .rank .score
+    top: 9%
+  .wrap-rank .rank .stt
+    right: 7%
+    font-size: 10px
+  .wrap-top .top .score
+    top: 18%
+  .wrap-top .top.top1 .score
+    top: 26%
+  .content.tab .detail
+    height: 200px
+  .wrap-rank
+    padding: 6px 14px
 @media screen and (max-width: 1124px)
   .content.tab
     .detail
-      height: 365px
+      height: 382px
   .frame
     .left, .right
       display: none
@@ -229,16 +420,37 @@ a
     width: 100%
 
 @media screen and (max-width: 1023px)
-  .content.tab
-    .detail
-      height: 255px
+  .el-tabs__nav
+    height: 40px
+  .wrap-rank .rank .absolute .img,.wrap-top .top .img
+    width: 30px;
+    height: 30px;
+  .wrap-top .top .score,.wrap-rank .rank .score
+    font-size: 12px
+  .wrap-rank .rank .score
+    top: 7%
+  .wrap-rank .rank .stt
+    right: 7%
+    font-size: 12px
+  .wrap-top .top .score
+    top: 18%
+  .wrap-top .top.top1 .score
+    top: 26%
+  .content.tab .detail
+    height: 296px
+  .wrap-rank
+    padding: 6px 14px
+  .el-tabs__item span
+    font-size: 12px!important
+  .el-tabs__item img
+    height: 20px!important
 
 @media screen and (max-width: 768px)
   .section2 .wrap-qc
     padding: 60px 15px
   .content.tab
     .detail
-      height: 235px
+      height: 267px
   .wrap-frame .frame .center
     width: calc(100% - 56px)
     height: calc(100% - 50px)
@@ -291,7 +503,18 @@ a
       .img-1
         max-width: 400px
 
+
 @media screen and (max-width: 768px)
+  .wrap-rank .rank .stt
+    right: 4%
+  .wrap-rank .rank .score
+    top: 5%
+  .wrap-top .top .score,.wrap-rank .rank .score
+    font-size: 10px
+  .bxh-logo img
+    height: 30px
+  .big-margin
+    margin-top: 50px
   .content.tab
     .detail
       width: 97%
@@ -318,3 +541,24 @@ a
       display: none
   .hidden-xs
     display: none
+  .content.tab
+    .detail
+      height: 50%
+  .wrap-rank .rank .absolute .img,.wrap-top .top .img
+    width: 20px;
+    height: 20px;
+  .wrap-top .top .score,.wrap-rank .rank .score
+    font-size: 6px
+  .wrap-rank .rank .score
+    top: 9%
+  .wrap-rank .rank .stt
+    right: 7%
+    font-size: 10px
+  .wrap-top .top .score
+    top: 18%
+  .wrap-top .top.top1 .score
+    top: 26%
+  .content.tab .detail
+    height: 200px
+  .wrap-rank
+    padding: 6px 14px

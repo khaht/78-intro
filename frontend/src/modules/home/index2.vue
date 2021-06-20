@@ -77,7 +77,7 @@
                     <el-tab-pane name="two">
                       <span slot="label"><img class="mr-3" src="@/assets/images/icons/17.png">Khuyễn mãi HOT</span>
                       <div class="detail">
-                        <div>
+                        <div class="scroll">
                           <div class="km" v-for="item in 16" :key="item">
                             <a src="">(Khuyến mãi hot)</a><span> Tài khoản thành viên khi tham gia cá cược...</span>
                           </div>
@@ -89,11 +89,70 @@
                       <div class="detail green">
                         <div class="bxh-logo">
                           <img class="logo" src="@/assets/images/icons/logo2.png">
+                          <el-row class="pt-2 flex">
+                            <el-col :span="12" class="top-frame">
+                              <div class="wrap-top">
+                                <div class="top top1">
+                                  <div class="absolute">
+                                    <div class="img">
+                                      <img class="avatar" src="@/assets/images/icons/avatar.png">
+                                    </div>
+                                  </div>
+                                  <div class="score">
+                                    <div class="name">tuanxxx21`3</div>
+                                    <div class="numb">4.879.644.000</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="wrap-top">
+                                <div class="top top2">
+                                  <div class="absolute">
+                                    <div class="img">
+                                      <img class="avatar" src="@/assets/images/icons/avatar.png">
+                                    </div>
+                                  </div>
+                                  <div class="score">
+                                    <div class="name">tuanxxx21`3</div>
+                                    <div class="numb">4.879.644.000</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="wrap-top">
+                                <div class="top top3">
+                                  <div class="absolute">
+                                    <div class="img">
+                                      <img class="avatar" src="@/assets/images/icons/avatar.png">
+                                    </div>
+                                  </div>
+                                  <div class="score">
+                                    <div class="name">tuanxxx21`3</div>
+                                    <div class="numb">4.879.644.000</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </el-col>
+                            <el-col :span="12">
+                              <div class="wrap-rank">
+                                <el-carousel :interval="5000" direction="vertical" :autoplay="false" ref="slider">
+                                  <el-carousel-item v-for="i in 5" :key="i">
+                                    <div class="rank" v-for="item in 5" :key="item">
+                                      <div class="absolute">
+                                        <div class="img">
+                                          <img class="avatar" src="@/assets/images/icons/avatar.png">
+                                        </div>
+                                      </div>
+                                      <div class="score">
+                                        <div class="name">tuanxxx21`3</div>
+                                        <div class="numb">4.879.644.000</div>
+                                      </div>
+                                      <div class="stt">1</div>
+                                    </div>
+                                  </el-carousel-item>
+                                </el-carousel>
+                              </div>
+                            </el-col>
+                          </el-row>
                         </div>
-                        <el-row>
-                          <el-col :span="12"><div class="grid-content bg-purple-dark"></div></el-col>
-                          <el-col :span="12"><div class="grid-content bg-purple-dark"></div></el-col>
-                        </el-row>
                       </div>
                     </el-tab-pane>
                   </el-tabs>
@@ -115,7 +174,7 @@
               </div>
               <div class="center">
                 <div class="content">
-                  <el-carousel :interval="5000" arrow="always">
+                  <el-carousel :interval="5000" arrow="never">
                     <el-carousel-item>
                       <div class="wrap-image">
                         <img src="@/assets/images/slider/game1.jpg">
@@ -155,7 +214,7 @@
               </div>
               <div class="center">
                 <div class="content">
-                  <el-carousel :interval="5000" arrow="always">
+                  <el-carousel :interval="5000" arrow="never">
                     <el-carousel-item>
                       <div class="wrap-image">
                         <img src="@/assets/images/slider/slide1.jpg">
@@ -210,15 +269,21 @@ import {mapGetters, mapActions} from 'vuex';
 
 export default class Home2 extends Vue {
   public loading: boolean = true;
-  public activeName: string = 'one';
+  public activeName: string = 'three';
   public actGet78winPromoCenter!: () => Promise<any>;
 
-  public created() {
-
+  public mounted() {
+    this.next();
   }
 
   public handleClick(tab: any, event: any) {
     console.log(tab, event);
+  }
+
+  public next(){
+
+    console.log(this.$refs.slider.next());
+    (this.$refs.slider as any).next();
   }
 }
 
