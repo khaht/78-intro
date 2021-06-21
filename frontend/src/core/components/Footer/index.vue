@@ -1,37 +1,37 @@
 <template>
-  <div class="footer" v-if="device==='mobile'">
+  <div class="footer" v-if="device === 'mobile'">
     <ul class="footer-menu">
       <li>
-        <router-link to="/">
+        <a href="https://www.78win01.com/gamelobby/egame" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/7.png">
+            <img src="@/assets/images/mobile/7.png" />
             <span>Trò chơi điện tử</span>
           </div>
-        </router-link>
+        </a>
       </li>
       <li>
-        <router-link to="/">
+        <a href="https://www.78win01.com/gamelobby/chess" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/8.png">
+            <img src="@/assets/images/mobile/8.png" />
             <span>Game bài 3D</span>
           </div>
-        </router-link>
+        </a>
       </li>
       <li>
-        <router-link to="/">
+        <a href="https://www.78win01.com/gamelobby/mpg" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/9.png">
+            <img src="@/assets/images/mobile/9.png" />
             <span>Thể loại khác</span>
           </div>
-        </router-link>
+        </a>
       </li>
       <li>
-        <router-link to="/">
+        <a href="https://www.78win01.com/Info/partner" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/10.png">
+            <img src="@/assets/images/mobile/10.png" />
             <span>Hợp tác đại lý</span>
           </div>
-        </router-link>
+        </a>
       </li>
     </ul>
   </div>
@@ -49,6 +49,7 @@ import { mapGetters } from 'vuex';
   },
 })
 export default class Landing extends Vue {
+  public device!: string;
   public gotoProfile() {
     router.push({ path: '/profile' });
   }

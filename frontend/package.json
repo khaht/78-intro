@@ -15,6 +15,7 @@
     "bulma": "^0.8.0",
     "detect-browser": "^5.0.0",
     "element-ui": "^2.13.0",
+    "faker": "^5.5.3",
     "ffmpeg.js": "^3.1.9001",
     "flex.box": "^3.4.4",
     "graphql": "^14.6.0",
@@ -54,6 +55,7 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@types/faker": "^5.5.6",
     "@types/howler": "^2.2.1",
     "@types/jest": "^25.1.4",
     "@types/lodash.clonedeep": "^4.5.6",

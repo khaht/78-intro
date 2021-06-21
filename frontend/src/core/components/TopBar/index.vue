@@ -3,33 +3,42 @@
     <div class="container">
       <ul class="nav">
         <li class="nav-item">
-          <router-link to="/"><img src="@/assets/images/icons/1.png"> <span>Trò chơi điện tử</span></router-link>
+          <a href="https://www.78win01.com/gamelobby/egame" target="_blank"
+            ><img src="@/assets/images/icons/1.png" /> <span>Trò chơi điện tử</span></a
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/"><img src="@/assets/images/icons/2.png"> <span>Game bài 3D</span></router-link>
+          <a href="https://www.78win01.com/gamelobby/chess" target="_blank"
+            ><img src="@/assets/images/icons/2.png" /> <span>Game bài 3D</span></a
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/"><img src="@/assets/images/icons/3.png"> <span>Thể loại khác</span></router-link>
+          <a href="https://www.78win01.com/gamelobby/mpg" target="_blank"
+            ><img src="@/assets/images/icons/3.png" /> <span>Thể loại khác</span></a
+          >
         </li>
         <li class="flex flex-col center">
-          <router-link to="/">
-            <img class="logo" src="@/assets/images/logo-app.png">
-          </router-link>
+          <a href="/" target="_blank">
+            <img class="logo" src="@/assets/images/logo-app.png" />
+          </a>
           <h1 class="slogan">Trung thực là nền tảng của sự sống còn</h1>
         </li>
         <li class="nav-item">
-          <router-link to="/"><img src="@/assets/images/icons/4.png"> <span>Hợp tác đại lý</span></router-link>
+          <a href="https://www.78win01.com/Info/partner" target="_blank"
+            ><img src="@/assets/images/icons/4.png" /> <span>Hợp tác đại lý</span></a
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/"><img src="@/assets/images/icons/5.png"> <span>CSKH online</span></router-link>
+          <a href="https://direct.lc.chat/12600750/" target="_blank"
+            ><img src="@/assets/images/icons/6.png" /> <span>CSKH online</span></a
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/"><img src="@/assets/images/icons/6.png"> <span>Truy cập trang web</span></router-link>
+          <a href="/" target="_blank"><img src="@/assets/images/icons/5.png" /> <span>Truy cập trang web</span></a>
         </li>
-        <li v-if="device==='mobile'" class="flex-1">
-        </li>
-        <li v-if="device==='mobile'">
-          <router-link to="/"><img src="@/assets/images/mobile/1.png"></router-link>
+        <li v-if="device === 'mobile'" class="flex-1"></li>
+        <li v-if="device === 'mobile'">
+          <a href="/" target="_blank"><img src="@/assets/images/mobile/1.png" /></a>
         </li>
       </ul>
     </div>
@@ -37,9 +46,9 @@
 </template>
 <script lang="ts">
 import Component from 'vue-class-component';
-import {Vue} from 'vue-property-decorator';
+import { Vue } from 'vue-property-decorator';
 import router from 'router';
-import {mapGetters} from 'vuex';
+import { mapGetters } from 'vuex';
 
 @Component({
   components: {},
@@ -49,7 +58,10 @@ import {mapGetters} from 'vuex';
 })
 export default class Landing extends Vue {
   public gotoHome() {
-    router.push({path: '/'});
+    router.push({ path: '/' });
+  }
+  public redirectExternal(link: string) {
+    window.open(link, '_blank');
   }
 }
 </script>
