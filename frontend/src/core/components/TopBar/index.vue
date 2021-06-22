@@ -1,5 +1,5 @@
 <template>
-  <div class="top-bar">
+  <div class="top-bar hidden md:block">
     <div class="container">
       <ul class="nav">
         <li class="nav-item">
@@ -34,11 +34,9 @@
           >
         </li>
         <li class="nav-item">
-          <a href="/" target="_blank"><img src="@/assets/images/icons/5.png" /> <span>Truy cập trang web</span></a>
-        </li>
-        <li v-if="device === 'mobile'" class="flex-1"></li>
-        <li v-if="device === 'mobile'">
-          <a href="/" target="_blank"><img src="@/assets/images/mobile/1.png" /></a>
+          <a href="https://www.78win01.com/?uagt=78wincoccoc01&path=signup" target="_blank"
+            ><img src="@/assets/images/icons/5.png" /> <span>Truy cập trang web</span></a
+          >
         </li>
       </ul>
     </div>

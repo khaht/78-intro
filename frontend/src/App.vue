@@ -1,22 +1,22 @@
 <template>
   <div v-if="$route.fullPath !== '/404'" class="h-full">
-    <top-bar/>
-    <router-view :class="device" :key="$route.fullPath"/>
+    <top-bar />
+    <router-view :class="device" :key="$route.fullPath" />
     <template v-if="$route.fullPath !== '/login'">
-      <footer-bar/>
+      <footer-bar />
     </template>
   </div>
   <div v-else>
-    <router-view :class="device" :key="$route.fullPath"/>
+    <router-view :class="device" :key="$route.fullPath" />
   </div>
 </template>
 
 <script lang="ts">
 import Component from 'vue-class-component';
-import {Vue, Prop} from 'vue-property-decorator';
+import { Vue, Prop } from 'vue-property-decorator';
 import appConfig from './app.config.json';
 import router from 'router';
-import {mapActions} from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 import TopBar from 'core/components/TopBar/index.vue';
 import FooterBar from 'core/components/Footer/index.vue';
 
@@ -28,7 +28,9 @@ import FooterBar from 'core/components/Footer/index.vue';
   methods: {
     ...mapActions('home', ['setDevice']),
   },
-  computed: {},
+  computed: {
+    ...mapGetters('home', ['device']),
+  },
 })
 export default class App extends Vue {
   public setDevice!: any;
@@ -47,7 +49,7 @@ export default class App extends Vue {
   }
 
   public goHome() {
-    router.push({path: '/'});
+    router.push({ path: '/' });
   }
 
   public checkDevice() {
@@ -68,7 +70,7 @@ export default class App extends Vue {
       }
     }
 
-    this.setDevice({device: this.device, screenSize: {w, h}});
+    this.setDevice({ device: this.device, screenSize: { w, h } });
   }
 
   public created() {
