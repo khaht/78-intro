@@ -28,9 +28,6 @@ import FooterBar from 'core/components/Footer/index.vue';
   methods: {
     ...mapActions('home', ['setDevice']),
   },
-  computed: {
-    ...mapGetters('home', ['device']),
-  },
 })
 export default class App extends Vue {
   public setDevice!: any;

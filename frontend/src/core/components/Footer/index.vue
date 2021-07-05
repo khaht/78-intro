@@ -4,7 +4,7 @@
       <li>
         <a href="https://www.78win01.com/gamelobby/egame" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/7.png" />
+            <img src="@/assets/images/mobile/7.webp" />
             <span>Trò chơi điện tử</span>
           </div>
         </a>
@@ -12,7 +12,7 @@
       <li>
         <a href="https://www.78win01.com/gamelobby/chess" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/8.png" />
+            <img src="@/assets/images/mobile/8.webp" />
             <span>Game bài 3D</span>
           </div>
         </a>
@@ -20,7 +20,7 @@
       <li>
         <a href="https://www.78win01.com/gamelobby/mpg" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/9.png" />
+            <img src="@/assets/images/mobile/9.webp" />
             <span>Thể loại khác</span>
           </div>
         </a>
@@ -28,7 +28,7 @@
       <li>
         <a href="https://www.78win01.com/Info/partner" target="_blank">
           <div class="flex">
-            <img src="@/assets/images/mobile/10.png" />
+            <img src="@/assets/images/mobile/10.webp" />
             <span>Hợp tác đại lý</span>
           </div>
         </a>

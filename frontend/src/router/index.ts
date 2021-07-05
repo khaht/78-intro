@@ -29,7 +29,7 @@ router.beforeEach(async (to, from, next) => {
   const lang = to.params.lang || 'en';
   await loadLanguageAsync(lang);
 
-  document.title = to.meta.title || '78win';
+  document.title = to.meta.title || 'Trò chơi Điện Tử - Bắn Cá Vui';
   const isLoginPage = to.matched.some((p: any) => p.path.indexOf('/login') === 0);
   try {
     const isAuthenticated = store.getters['auth/isAuthenticated'];

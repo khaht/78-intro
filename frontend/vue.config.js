@@ -11,6 +11,23 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'assets',
   productionSourceMap: false,
+  // chainWebpack: (config) => {
+  //   config.module
+  //     .rule('images')
+  //     .test(/\.(jpg|png|gif|webp)$/)
+  //     .use('url-loader')
+  //     .loader('url-loader')
+  //     .options({
+  //       limit: false,
+  //       publicPath:
+  //         process.env.NODE_ENV === 'production'
+  //           ? 'https://781078.cdn.vccloud.vn/assets/img/'
+  //           : resolve('src/assets/images'),
+  //       outputPath: 'assets/img',
+  //       name: '[name].[ext]',
+  //     })
+  //     .end();
+  // },
   configureWebpack: {
     resolve: {
       alias: {
@@ -29,6 +46,7 @@ module.exports = {
         images: resolve('src/assets/images'),
       },
     },
+
     module: {},
     plugins: [
       new webpack.NormalModuleReplacementPlugin(

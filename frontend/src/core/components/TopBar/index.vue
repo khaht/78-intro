@@ -4,38 +4,38 @@
       <ul class="nav">
         <li class="nav-item">
           <a href="https://www.78win01.com/gamelobby/egame" target="_blank"
-            ><img src="@/assets/images/icons/1.png" /> <span>Trò chơi điện tử</span></a
+            ><img src="@/assets/images/icons/1.webp" /> <span>Trò chơi điện tử</span></a
           >
         </li>
         <li class="nav-item">
           <a href="https://www.78win01.com/gamelobby/chess" target="_blank"
-            ><img src="@/assets/images/icons/2.png" /> <span>Game bài 3D</span></a
+            ><img src="@/assets/images/icons/2.webp" /> <span>Game bài 3D</span></a
           >
         </li>
         <li class="nav-item">
           <a href="https://www.78win01.com/gamelobby/mpg" target="_blank"
-            ><img src="@/assets/images/icons/3.png" /> <span>Thể loại khác</span></a
+            ><img src="@/assets/images/icons/3.webp" /> <span>Thể loại khác</span></a
           >
         </li>
         <li class="flex flex-col center">
           <a href="/" target="_blank">
-            <img class="logo" src="@/assets/images/logo-app.png" />
+            <img class="logo" src="@/assets/images/logo-app.webp" />
           </a>
           <h1 class="slogan">Trung thực là nền tảng của sự sống còn</h1>
         </li>
         <li class="nav-item">
           <a href="https://www.78win01.com/Info/partner" target="_blank"
-            ><img src="@/assets/images/icons/4.png" /> <span>Hợp tác đại lý</span></a
+            ><img src="@/assets/images/icons/4.webp" /> <span>Hợp tác đại lý</span></a
           >
         </li>
         <li class="nav-item">
           <a href="https://direct.lc.chat/12600750/" target="_blank"
-            ><img src="@/assets/images/icons/6.png" /> <span>CSKH online</span></a
+            ><img src="@/assets/images/icons/6.webp" /> <span>CSKH online</span></a
           >
         </li>
         <li class="nav-item">
           <a href="https://www.78win01.com/?uagt=78wincoccoc01&path=signup" target="_blank"
-            ><img src="@/assets/images/icons/5.png" /> <span>Truy cập trang web</span></a
+            ><img src="@/assets/images/icons/5.webp" /> <span>Truy cập trang web</span></a
           >
         </li>
       </ul>

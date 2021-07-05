@@ -4,22 +4,22 @@
       <!-- <div class="bg"></div> -->
       <div class="container">
         <div class="mobile-qc pt-5" v-if="device === 'mobile'">
-          <img src="@/assets/images/mobile/3.png" />
+          <img src="@/assets/images/mobile/3.webp" />
         </div>
         <div class="first-qc">
           <div class="flex">
             <div class="img-1">
-              <img src="@/assets/images/icons/10.png" />
+              <img src="@/assets/images/icons/10.webp" />
             </div>
             <div class="img-2">
-              <img class="cursor-pointer" src="@/assets/images/icons/9.png" />
+              <img class="cursor-pointer" src="@/assets/images/icons/9.webp" />
             </div>
             <div class="img-3">
-              <img class="cursor-pointer" src="@/assets/images/icons/11.png" />
+              <img class="cursor-pointer" src="@/assets/images/icons/11.webp" />
             </div>
           </div>
           <div class="text">
-            <img class="w-3/5" src="@/assets/images/icons/8.png" />
+            <img class="w-3/5" src="@/assets/images/icons/8.webp" />
           </div>
         </div>
       </div>
@@ -31,29 +31,29 @@
             <img
               class="cursor-pointer"
               @click="redirectExternal('http://78win.vn/download')"
-              src="@/assets/images/btn-download.png"
+              src="@/assets/images/btn-download.webp"
             />
             <img
               class="cursor-pointer"
               @click="redirectExternal('https://www.78win01.com/?uagt=78wincoccoc01&path=signup')"
-              src="@/assets/images/btn-access.png"
+              src="@/assets/images/btn-access.webp"
             />
           </div>
           <div class="zone-1">
             <div class="text1">
-              <img class="mx-auto w-4/5" src="@/assets/images/icons/15.png" />
+              <img class="mx-auto w-4/5" src="@/assets/images/icons/15.webp" />
             </div>
             <div class="wrap-frame">
               <div class="frame mt-5 frame-custom">
                 <div class="left left1">
-                  <img src="@/assets/images/icons/absolute1.png" />
+                  <img src="@/assets/images/icons/absolute1.webp" />
                 </div>
                 <div class="center">
                   <div class="content tab">
                     <el-tabs v-model="activeName" @tab-click="handleClick">
                       <el-tab-pane name="one">
                         <span slot="label"
-                          ><img class="mr-3" src="@/assets/images/icons/38.png" />Đăng nhập/đăng ký</span
+                          ><img class="mr-3" src="@/assets/images/icons/38.webp" />Đăng nhập/đăng ký</span
                         >
                         <div class="detail login">
                           <div class="flex justify-center align-center h-full">
@@ -65,12 +65,12 @@
                                 <img
                                   @click="redirectExternal('http://783478.com/')"
                                   class="mb-6 opacity-70 hover:opacity-100 login-btn cursor-pointer"
-                                  src="@/assets/images/icons/39.png"
+                                  src="@/assets/images/icons/40.webp"
                                 />
                                 <img
                                   @click="redirectExternal('http://783478.com/')"
                                   class="login-btn opacity-70 hover:opacity-100 cursor-pointer"
-                                  src="@/assets/images/icons/40.png"
+                                  src="@/assets/images/icons/39.webp"
                                 />
                               </div>
                             </el-col>
@@ -78,7 +78,7 @@
                         </div>
                       </el-tab-pane>
                       <el-tab-pane name="two">
-                        <span slot="label"><img class="mr-3" src="@/assets/images/icons/17.png" />Khuyến mãi HOT</span>
+                        <span slot="label"><img class="mr-3" src="@/assets/images/icons/17.webp" />Khuyến mãi HOT</span>
                         <div class="detail detail-km">
                           <div class="scroll">
                             <div class="mb-1" v-for="(item, idx) in promotions" :key="item">
@@ -94,10 +94,10 @@
                         </div>
                       </el-tab-pane>
                       <el-tab-pane name="three">
-                        <span slot="label"><img class="mr-3" src="@/assets/images/icons/18.png" />Bảng xếp hạng</span>
+                        <span slot="label"><img class="mr-3" src="@/assets/images/icons/18.webp" />Bảng xếp hạng</span>
                         <div class="detail green">
                           <div class="bxh-logo">
-                            <img class="logo" src="@/assets/images/icons/logo2.png" />
+                            <img class="logo" src="@/assets/images/icons/logo2.webp" />
                             <el-row class="pt-2 flex">
                               <el-col :span="12" class="top-frame">
                                 <div class="wrap-top">
@@ -174,7 +174,7 @@
                   </div>
                 </div>
                 <div class="right right1">
-                  <img src="@/assets/images/icons/absolute2.png" />
+                  <img src="@/assets/images/icons/absolute2.webp" />
                 </div>
               </div>
             </div>
@@ -182,46 +182,46 @@
 
           <div class="md:mt-16 mt-0">
             <div class="text2">
-              <img class="mx-auto w-3/5" src="@/assets/images/icons/19.png" />
+              <img class="mx-auto w-3/5" src="@/assets/images/icons/19.webp" />
             </div>
             <div class="wrap-frame">
               <div class="frame mt-5">
                 <div class="w-full left left2">
-                  <img class="w-full" src="@/assets/images/icons/absolute3.png" />
+                  <img class="w-full" src="@/assets/images/icons/absolute3.webp" />
                 </div>
                 <div class="center">
                   <div class="content">
                     <carousel :autoplay="true" :loop="true" :per-page="1" paginationPosition="bottom-overlay">
                       <slide>
                         <div class="wrap-image">
-                          <img src="@/assets/images/slider/slide5.png" />
+                          <img src="@/assets/images/slider/slide5.webp" />
                         </div>
                       </slide>
                       <slide>
                         <div class="wrap-image">
-                          <img src="@/assets/images/slider/slide4.png" />
+                          <img src="@/assets/images/slider/slide4.webp" />
                         </div>
                       </slide>
                       <slide>
                         <div class="wrap-image">
-                          <img src="@/assets/images/slider/slide1.png" />
+                          <img src="@/assets/images/slider/slide1.webp" />
                         </div>
                       </slide>
                       <slide>
                         <div class="wrap-image">
-                          <img src="@/assets/images/slider/slide2.png" />
+                          <img src="@/assets/images/slider/slide2.webp" />
                         </div>
                       </slide>
                       <slide>
                         <div class="wrap-image">
-                          <img src="@/assets/images/slider/slide6.png" />
+                          <img src="@/assets/images/slider/slide6.webp" />
                         </div>
                       </slide>
                     </carousel>
                   </div>
                 </div>
                 <div class="right w-full right2">
-                  <img src="@/assets/images/icons/absolute4.png" />
+                  <img src="@/assets/images/icons/absolute4.webp" />
                 </div>
               </div>
             </div>
@@ -259,8 +259,6 @@ import anh5 from '@/assets/images/icons/anh5.png';
 import anh6 from '@/assets/images/icons/anh6.png';
 import anh7 from '@/assets/images/icons/anh7.png';
 import anh8 from '@/assets/images/icons/anh8.png';
-import anh9 from '@/assets/images/icons/anh9.png';
-import anh10 from '@/assets/images/icons/anh10.png';
 
 @Component({
   components: { Carousel, Slide },
@@ -328,13 +326,13 @@ export default class Home extends Vue {
     'anh****wqa',
     'rew****dsd',
   ];
-  public imgs: any[] = [anh1, anh2, anh3, anh4, anh5, anh6, anh7, anh8, anh9, anh10];
+  public imgs: any[] = [anh1, anh2, anh3, anh4, anh5, anh6, anh7, anh8];
   public nameF: string = this.names[this.getRandomInt(0, 47)];
   public nameS: string = this.names[this.getRandomInt(0, 47)];
   public nameT: string = this.names[this.getRandomInt(0, 47)];
-  public imgF: string = this.imgs[this.getRandomInt(0, 9)];
-  public imgS: string = this.imgs[this.getRandomInt(0, 9)];
-  public imgT: string = this.imgs[this.getRandomInt(0, 9)];
+  public imgF: string = this.imgs[this.getRandomInt(0, 7)];
+  public imgS: string = this.imgs[this.getRandomInt(0, 7)];
+  public imgT: string = this.imgs[this.getRandomInt(0, 7)];
   public slideCurrent: number = 0;
   public subRank: any = [];
   public minMoney: number = 0;
@@ -362,9 +360,9 @@ export default class Home extends Vue {
       this.nameS = this.names[this.getRandomInt(0, 47)];
       this.nameF = this.names[this.getRandomInt(0, 47)];
       this.nameT = this.names[this.getRandomInt(0, 47)];
-      this.imgF = this.imgs[this.getRandomInt(0, 9)];
-      this.imgS = this.imgs[this.getRandomInt(0, 9)];
-      this.imgT = this.imgs[this.getRandomInt(0, 9)];
+      this.imgF = this.imgs[this.getRandomInt(0, 7)];
+      this.imgS = this.imgs[this.getRandomInt(0, 7)];
+      this.imgT = this.imgs[this.getRandomInt(0, 7)];
       this.generateRank(this.slideCurrent);
     }, 5000);
     this.next();
@@ -380,7 +378,7 @@ export default class Home extends Vue {
     this.subRank = ids[index].map((item) => ({
       id: item,
       name: this.names[this.getRandomInt(0, 47)],
-      img: this.imgs[this.getRandomInt(0, 9)],
+      img: this.imgs[this.getRandomInt(0, 7)],
       money: this.getRandomInt(min, maxMn - item * 5),
     }));
     this.subRank = this.subRank.sort((a: any, b: any) => b.money - a.money);
@@ -426,7 +424,7 @@ export default class Home extends Vue {
   }
 }
 .item-km {
-  background: url('~@/assets/images/bg-km.png') no-repeat;
+  background: url('~@/assets/images/bg-km.webp') no-repeat;
   background-size: contain;
   width: 100%;
   height: 45px;
@@ -482,6 +480,9 @@ export default class Home extends Vue {
   width: 100% !important;
 }
 @media screen and (max-width: 375px) {
+  .content.tab .detail {
+    height: 150px;
+  }
   .stt {
     right: -5% !important;
     top: 2px !important;

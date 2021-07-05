@@ -28,6 +28,7 @@
       span
         font-family: Avo, sans-serif
         text-align: center
+        font-size: 13px
     &.nav-item:hover
       background-color: #1a202c
     &.center
@@ -42,6 +43,14 @@
     font-size: 14px
     text-align: center
 
+@media screen and (max-width: 1366px)
+  .nav
+    li
+      a
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
 @media screen and (max-width: 768px)
   .nav
