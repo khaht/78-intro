@@ -10,6 +10,7 @@ module.exports = {
   lintOnSave: true,
   outputDir: 'dist',
   assetsDir: 'assets',
+  publicPath: process.env.BASE_URL,
   productionSourceMap: false,
   // chainWebpack: (config) => {
   //   config.module
