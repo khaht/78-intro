@@ -35,7 +35,7 @@
             />
             <img
               class="cursor-pointer"
-              @click="redirectExternal('https://www.78win01.com/?uagt=78wincoccoc01&path=signup')"
+              @click="redirectExternal('https://www.78win01.com/?uagt=78cc01&path=signup')"
               src="@/assets/images/btn-access.webp"
             />
           </div>
@@ -51,7 +51,7 @@
                 <div class="center">
                   <div class="content tab">
                     <el-tabs v-model="activeName" @tab-click="handleClick">
-                      <el-tab-pane name="one">
+                      <!-- <el-tab-pane name="one">
                         <span slot="label"
                           ><img class="mr-3" src="@/assets/images/icons/38.webp" />Đăng nhập/đăng ký</span
                         >
@@ -76,7 +76,7 @@
                             </el-col>
                           </div>
                         </div>
-                      </el-tab-pane>
+                      </el-tab-pane> -->
                       <el-tab-pane name="two">
                         <span slot="label"><img class="mr-3" src="@/assets/images/icons/17.webp" />Khuyến mãi HOT</span>
                         <div class="detail detail-km">
@@ -230,7 +230,7 @@
       </div>
     </section>
     <section>
-      <div class="p-6 md:p-6 pt-0 text-center pb-24 md:pb-4">
+      <div class="p-6 md:p-6 pt-0 text-center pb-4">
         <span class="text-white text-xs sm:text-sm font-bold"
           ><a
             class="text-white"

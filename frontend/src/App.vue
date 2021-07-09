@@ -1,9 +1,9 @@
 <template>
   <div v-if="$route.fullPath !== '/404'" class="h-full">
-    <top-bar />
+    <!-- <top-bar /> -->
     <router-view :class="device" :key="$route.fullPath" />
     <template v-if="$route.fullPath !== '/login'">
-      <footer-bar />
+      <!-- <footer-bar /> -->
     </template>
   </div>
   <div v-else>
