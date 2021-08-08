@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <section class="section1">
+      <div class="w-11/12 mx-auto md:pt-8 pt-4">
+        <img src="@/assets/images/n-logo.webp" class="img-n-logo" />
+      </div>
       <!-- <div class="bg"></div> -->
       <div class="container">
         <div class="mobile-qc pt-5" v-if="device === 'mobile'">
@@ -19,7 +22,7 @@
             </div>
           </div>
           <div class="text">
-            <img class="w-3/5" src="@/assets/images/icons/8.webp" />
+            <img class="w-3/5" src="@/assets/images/icons/8_2.webp" />
           </div>
         </div>
       </div>
@@ -41,7 +44,7 @@
           </div>
           <div class="zone-1">
             <div class="text1">
-              <img class="mx-auto w-4/5" src="@/assets/images/icons/15.webp" />
+              <img class="mx-auto w-4/5" src="@/assets/images/icons/15_2.webp" />
             </div>
             <div class="wrap-frame">
               <div class="frame mt-5 frame-custom">
@@ -95,9 +98,9 @@
                       </el-tab-pane>
                       <el-tab-pane name="three">
                         <span slot="label"><img class="mr-3" src="@/assets/images/icons/18.webp" />Bảng xếp hạng</span>
-                        <div class="detail green">
-                          <div class="bxh-logo">
-                            <img class="logo" src="@/assets/images/icons/logo2.webp" />
+                        <div class="detail green flex justify-center items-center">
+                          <div class="bxh-logo w-full">
+                            <!-- <img class="logo" src="@/assets/images/icons/logo2.webp" /> -->
                             <el-row class="pt-2 flex">
                               <el-col :span="12" class="top-frame">
                                 <div class="wrap-top">
@@ -182,7 +185,7 @@
 
           <div class="md:mt-16 mt-0">
             <div class="text2">
-              <img class="mx-auto w-3/5" src="@/assets/images/icons/19.webp" />
+              <img class="mx-auto w-3/5" src="@/assets/images/icons/19_2.webp" />
             </div>
             <div class="wrap-frame">
               <div class="frame mt-5">
@@ -231,15 +234,8 @@
     </section>
     <section>
       <div class="p-6 md:p-6 pt-0 text-center pb-4">
-        <span class="text-white text-xs sm:text-sm font-bold"
-          ><a
-            class="text-white"
-            href="https://www.78win.vn/"
-            target="
-        _blank"
-            >78WIN.com</a
-          >
-          - Bản quyền © 2021</span
+        <span class="text-white txt-license text-xs md:text-sm font-medium"
+          >Copyright © CROWN CASINO _ cc6.com 2020-2022 Reserved</span
         >
       </div>
     </section>
@@ -343,11 +339,11 @@ export default class Home extends Vue {
 
   public promotions: string[] = [
     'Khuyến mãi FREEBET 30K',
-    'Khuyến mãi Nạp Lần Đầu Tiên lên đến 120%',
-    'Khuyến mãi chào mừng hội viên mới mãn tuần, mãn tháng',
-    'Chơi bài 3D Nhận Quà Cực Phê',
-    'Siêu Thưởng Tiền Mặt Hàng tháng lên đến 50 Triệu Đồng',
-    'Chơi Slot Game Thưởng Lên đến 88.888.888',
+    'Khuyến mãi nạp đầu lên đến 166%',
+    'Khuyến mãi mãn tuần- mãn tháng 66.666.666đ',
+    'Phần Thưởng Bí Ẩn phát thưởng hàng tháng lên đến 66 TRIỆU ĐỒNG',
+    'Siêu thưởng tiền mặt hàng tháng, chơi càng nhiều thưởng càng lớn',
+    'Hàng chục khuyến mãi cho SLOT GAMES, BẮN CÁ',
   ];
 
   public mounted() {
@@ -414,6 +410,9 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.img-n-logo {
+  width: 200px;
+}
 .text-white {
   color: #fff !important;
 }
@@ -425,7 +424,7 @@ export default class Home extends Vue {
 }
 .item-km {
   background: url('~@/assets/images/bg-km.webp') no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   width: 100%;
   height: 45px;
   font-size: 13px;
@@ -495,6 +494,12 @@ export default class Home extends Vue {
   }
 }
 @media screen and (max-width: 768px) {
+  .txt-license {
+    font-size: 10px;
+  }
+  .img-n-logo {
+    margin: auto;
+  }
   .detail-km {
     .txt-km {
       max-width: 60%;
